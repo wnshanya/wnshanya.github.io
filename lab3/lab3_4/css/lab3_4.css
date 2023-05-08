@@ -1,0 +1,28 @@
+html {
+     text-align: center
+}
+
+body {
+    background-image: url("../images/black-cubes.png");
+    color: white;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    color: red;
+    font-family:'Roboto';
+    margin: 30px;
+}
+
+p {
+    margin: 20px;
+}
+
+em {
+    color:greenyellow;
+    border-bottom: double;
+    padding: 5px;
+}
+
+strong {
+    font-family: 'Caveat';
+}

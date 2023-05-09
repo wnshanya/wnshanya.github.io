@@ -1,0 +1,112 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<title>Главная страница</title>
+<style>
+html {
+	background: gray;
+}
+
+.clearfix::after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+#container {
+	display: block;
+	width: 850px;
+	height: 450px;
+	margin: 0 auto;
+	background: white;
+	padding: 10px;
+}
+
+#header {
+	background-color: #ccddee;
+	width: auto;
+	height: 100px;
+}
+
+#outer {
+	padding-top: 10px;
+	padding-bottom: 10px;
+}
+
+#inner {
+	margin-top: auto;
+	margin-bottom: auto;
+}
+
+#left {
+	float: left;
+	display: table;
+	width: 200px;
+	height: 230px;
+	background: url(../lab6/images/left.png);
+}
+
+#center {
+	padding-left: 10px;
+	margin: 0 200px;
+	float: none;
+}
+
+#right {
+	float: right;
+	align-items: center;
+	display: flex;
+	width: 200px;
+	height: 230px;
+	background: url(../lab6/images/right.png);
+}
+
+p {
+	display: block;
+	margin: 0 auto;
+}
+
+#footer {
+	width: 850px;
+	height: 100px;
+	background: #ddccee;
+	position: absolute;
+	bottom: 10px;
+}
+
+#end {
+	clear: both;
+}
+
+li {
+	list-style-type: none;
+}
+
+li:before {
+	content: url(../lab6/images/plus.png);
+	margin: 3px;
+}
+</style>
+</head>
+<body>
+<div id="container">
+	<div id="header"></div>
+	<div id="outer">
+		<div id="inner">
+			<div id="left">
+				<ul>
+					<li><a href="#">Камень</a></li>
+					<li><a href="#">Ножницы</a></li>
+					<li><a href="#">Бумага</a></li>
+				</ul>
+			</div>
+			<div id="right"><p>right</p></div>
+			<div id="center">center center center center center center center center center center center center center center center center center center center center center center center center center center center center center center center center center center center center center center center center center center center center center center center center center center center center center center center center center center center center center center center center center center center center center center center center center center center center center center center center center center</div>
+			<div id="end"></div>
+		</div>
+	</div>
+	<div id="footer"></div>
+</div>
+</body>
+</html>

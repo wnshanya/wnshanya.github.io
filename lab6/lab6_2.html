@@ -1,4 +1,4 @@
-<!doctype html>
+<!-- <!doctype html>
 <html lang="ru">
 <head>
 <meta charset="utf-8">
@@ -109,4 +109,108 @@ li:before {
 	<div id="footer"></div>
 </div>
 </body>
-</html>
+</html> -->
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Главная страница</title>
+    <link type="text/css" rel="stylesheet" href="css/main.css">
+    <style>
+    .clearfix::after {
+        content: "";
+        display: table;
+        clear: both;
+    }
+html {
+	background: gray;
+}
+    html,body {
+	    height: 100%;
+    }
+
+    #container{
+        position: relative;
+        min-height: 100%;
+        width: 800px;
+        border: 6px solid #ffffff; 
+        text-align: left; 
+        margin: 0 auto;
+    }
+    #content{
+        background: #ffffff;
+        padding-bottom: 90px;
+        
+    }
+    #header{
+        background: #CCDDEE;
+        height: 100px;
+        border: 10px solid #ffffff;
+        
+    }
+    #left{
+        background-image: url(../lab6/images/left.png);
+        float: left;
+        height: 180px;
+        width: 200px;
+        border: 10px solid #ffffff;
+        
+    
+    }
+    #right{
+        background-image: url(../lab6/images/right.png);
+        float: right;
+        height: 180px;
+        width: 200px;
+        border: 10px solid #ffffff;
+        
+    
+    }
+    #center{
+        width: 600px;
+        background:rgb(255, 255, 255);
+        border: 10px solid #ffffff;
+        margin: 0;
+    
+    }
+    #footer{
+        position: absolute;
+        background: #c4b7f8;
+        height: 80px;
+        width: 783px;
+        left: 0;
+        bottom: 0;
+        border: 10px solid #ffffff;
+    
+    }
+    li { 
+        list-style-image: url(../lab6/images/plus.png); 
+    } 
+    </style>
+    </head>
+    <body>
+    
+     <div id = "container" >
+        <div id="content">
+        <div id="header"></div>
+        <div id="outer">
+            <div id="inner">
+                <div id="left">
+                    <ul>
+                        <li><a href="#">Камень</a></li>
+                        <li><a href="#">Ножницы</a></li>
+                        <li><a href="#">Бумага</a></li>
+                    </ul>
+                </div>
+                <div id="right">right</div>
+                <div id="center">center center center center center center center center center center center center center center center center center center center center center center center center center center center center center center center center center center center center center center center center center center center center center center center center center center center center center center center center center center center center center center center center center center center center center center center center center center center center center center center center center center</div>
+                <div id="end" class="clearfix"></div>
+            </div>
+        </div>
+     </div>
+        <div id="footer"></div>
+    </div>
+    </body>
+    </html>

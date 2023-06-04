@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+
+<html lang="ru">
+    <head>
+        <title>Братья наши меньшие</title>
+        <script>
+            "use strict"
+
+            let n = prompt("Введите количество строк: "), list = [
+            "dog dog dog cat cat dog", 
+            "dog dog cat cat dog dog", 
+            "dog cat cat dog dog dog", 
+            "cat cat dog dog dog cat", 
+            "cat dog dog dog cat cat"
+            ]
+
+            for (let i = 0; i < n; i++) {
+                console.log(list[i % 5]);
+            }
+        </script>
+    </head>
+</html>

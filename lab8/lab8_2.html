@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+
+<html lang="ru">
+    <head>
+        <title>Мишени</title>
+
+        <script>
+            "use strict"
+            let num = prompt("Введите число "), checker
+
+            if (isNaN(num)) {
+                checker = 4
+            } else { if (Math.floor((num % 100) / 10) === 1) {
+                checker = 3
+                } else { if (num % 10 === 1) {
+                    b = 1
+                    } else { if (num % 10 === 2 || num % 10 === 3 || num % 10 === 4 ) {
+                        checker = 2
+                        } else { 
+                            checker = 3
+                        }
+                    }
+                }
+            }
+
+            switch(checker) {
+                case 1:
+                    alert("На ветке сидит" + " " + num + " " + "ворона");
+                    break
+                case 2:
+                    alert("На ветке сидит" + " " + num + " " + "вороны");
+                    break
+                case 3:
+                    alert("На ветке сидит" + " " + num + " " + "ворон");
+                    break
+                default:
+                    alert("Непредвиденная ошибка!!!")
+                    break
+            }      
+        </script>
+    </head>
+</html>

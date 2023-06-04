@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+
+<html lang="ru">
+    <head>
+        <title>Люди</title>
+
+        <script>
+            "use strict"
+
+            function sortByAge(arr) {
+                arr.sort((a, b) => a.age > b.age ? 1 : -1)
+            }
+
+            let michael = { 
+                name: "Миша", 
+                age: 19 
+            }
+
+            let arthur = { 
+                name: "Артур", 
+                age: 19 
+            }
+
+            let eugene = { 
+                name: "Женя", 
+                age: 20 
+            }
+
+            let people = [ 
+                michael,
+                arthur, 
+                eugene
+            ]
+
+            alert(people[0].name)
+            alert(people[1].name)
+            alert(people[2].name)
+
+            sortByAge(people)
+            
+            alert(people[0].name)
+            alert(people[1].name)
+            alert(people[2].name)
+        </script>
+    </head>
+</html>

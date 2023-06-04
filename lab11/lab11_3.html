@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+
+<html lang="ru">
+    <head>
+        <title>Книги</title>
+
+        <script>
+            "use strict"
+
+            function isEmpty(obj) {
+                for (let key in obj) {
+                    return false;
+                }
+
+                return true;
+            }
+
+            let book_1 = {}
+            
+            alert(isEmpty(book_1))
+
+            book_1.title = "ТРИ ТОВАРИЩА"
+            book_1.pubYear = 2021
+            book_1.price = 1337
+
+            alert(isEmpty(book_1))
+
+            let book_2 = {
+                title: "GENERATION П",
+                pubYear: 2020,
+                price: 228,
+            }
+
+            alert(isEmpty(book_2))
+        </script>
+    </head>
+</html>

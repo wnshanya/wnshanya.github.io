@@ -1,3 +1,5 @@
+'use strict'
+
 export default function fib(n) {
     let a = 1n;
     let b = 1n;

@@ -62,7 +62,7 @@ export function fibs(n){
 }
 
 export function  arrReverseSorted(arr) {
-    let arr_copy = arr
+    let arr_copy = arr.slice();
     
     return arr_copy.sort(function (a, b) {
         return b - a

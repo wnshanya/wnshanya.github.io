@@ -1,3 +1,5 @@
+'use strict'
+
 import fib from './lab9.js'
 
 export function getDecimal(num) {

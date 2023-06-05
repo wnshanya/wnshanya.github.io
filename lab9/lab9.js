@@ -18,15 +18,16 @@ function factorial(n) {
     if (n <= 1) {
         return 1n
     } else {
-       result = BigInt(n) * BigInt(factorial(n - 1))
+       const result = BigInt(n) * BigInt(factorial(n - 1))
 
        return result
     }  
 }
 
  function fib(n) {
-    a = BigInt(1)
-    b = BigInt(1)
+    const a = BigInt(1)
+    const b = BigInt(1)
+    const c
 
     if (n == BigInt(0)) {
         return BigInt(0)

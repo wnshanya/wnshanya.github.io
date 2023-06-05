@@ -32,7 +32,7 @@ function factorial(n) {
     if (n == BigInt(0)) {
         return BigInt(0)
     } else { 
-        for (i = BigInt(3); i <= n; i++) {
+        for (let i = BigInt(3); i <= n; i++) {
             c = a + b
             a = b
             b = c

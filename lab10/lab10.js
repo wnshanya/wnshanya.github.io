@@ -24,9 +24,9 @@ export function ucFirst(str) {
 }
 
 export function checkSpam(str) {
-    let NewStr = str.toLowerCase()
+    let new_str = str.toLowerCase()
 
-    return NewStr.includes('viagra') || NewStr.includes('xxx')
+    return new_str.includes('viagra') || new_str.includes('xxx')
 }
 
 export function truncate(str, max_length) {
@@ -38,18 +38,18 @@ export function truncate(str, max_length) {
 }
 
 export function camelize(str){
-    let STR = str.split("-")
-    let StrNew = ""
+    let buff_str = str.split("-")
+    let new_str = ""
 
-    for (let i = 0; i <= STR.length - 1; i++) {
+    for (let i = 0; i <= buff_str.length - 1; i++) {
         if (i == 0) {
-            StrNew = STR[0]
+            new_str = buff_str[0]
         } else {
-            StrNew += ucFirst(STR[i])
+            new_str += ucFirst(buff_str[i])
         }
     }
 
-    return StrNew
+    return new_str
 }
 
 export function fibs(n){  
@@ -62,11 +62,15 @@ export function fibs(n){
 }
 
 export function  arrReverseSorted(arr) {
-    return arr.sort(function (a, b) {
+    let arr_copy = arr
+    
+    return arr_copy.sort(function (a, b) {
         return b - a
     })
 }
 
 export function unique(arr) {
-    return Array.from(new Set(arr))
+    let arr_copy = arr
+    
+    return Array.from(new Set(arr_copy))
 }

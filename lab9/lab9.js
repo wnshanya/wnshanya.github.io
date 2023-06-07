@@ -4,6 +4,14 @@ function pow(x, n) {
     return x ** n;
 }
 
+/**
+ * Возвращает x, возведённое в степень n.
+ *
+ * @param {number} x возводимое в степень число.
+ * @param {number} n степень.
+ * @return {number} x ** n, результат возведения в степень n числа x.
+ */
+
 function sumTo(n) {
    let sum = 0
 
@@ -14,6 +22,13 @@ function sumTo(n) {
    return sum;
 }
 
+/**
+ * Возвращает сумму чисел от 1 до n.
+ *
+ * @param {number} n супремум.
+ * @return {number} sum, сумма чисел от 1 до n.
+ */
+
 function factorial(n) {   
     if (n <= 1) {
         return 1n
@@ -23,6 +38,13 @@ function factorial(n) {
        return result
     }  
 }
+
+/**
+ * Возвращает факториал числа n.
+ *
+ * @param {number} n число, факториал которого должен быть вычисленным.
+ * @return {number} result, факториал числа n.
+ */
 
  function fib(n) {
     let a = BigInt(1)
@@ -42,6 +64,13 @@ function factorial(n) {
     }
 }
 
+/**
+ * Возвращает n-е число Фибоначчи.
+ *
+ * @param {number} n порядковый номер числа Фибоначчи.
+ * @return {number} b, n-е число Фибоначчи.
+ */
+
 function compare(x) {
     return function(y) {
         if (y > x) {
@@ -54,6 +83,14 @@ function compare(x) {
     }
 }
 
+/**
+ * Возвращает результат сравнения значений x и y.
+ *
+ * @param {number} x первый аргумент.
+ * @param {number} y второй аргумент.
+ * @return {function} анонимная функция, которая возвращает true, false или null
+ */
+
 function sum() {
    var result = 0
 
@@ -63,3 +100,10 @@ function sum() {
 
    return result;
 }
+
+/**
+ * Возвращает сумму всех своих аргументов.
+ *
+ * @param {number} список аргументов.
+ * @return {number} result, сумма всех аргументов.
+ */

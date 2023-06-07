@@ -1,45 +1,47 @@
-<!DOCTYPE html>
+<!DOCTYPE HTML>
 
-<html>
+<html lang="ru">
     <head>
-        <title>Плейсхолдер-подсказка</title>
+        <title>Мучительная подсказка</title>
 
         <style>
-            .placeholder:-moz-placeholder {
+            ::placeholder {
                 color: blue;
             }
 
-            .placeholder::-webkit-input-placeholder {
-                color: blue;
-            }
-
-            div {
-                color: blue;
-                font-size: 12px;
-            }
+            #container {
+			    color: blue;
+		    }
         </style>
     </head>
 
     <body>
-        <div> </div>
-        
-        <input type = "text" class = "placeholder" placeholder = "подсказка"> 
-        
+        <div id="container">
+            <label></label>
+            <input type = "text" data-placeholder = "Подсказка"/>
+        </div>
+
         <script>
             'use strict'
 
-            let input = document.querySelector(".placeholder")
-            let div = document.querySelector("div")
+            let cont = document.getElementById("container")
 
-            input.onfocus = function() {
-                div.innerHTML = input.getAttribute("placeholder")
+            let input = cont.getElementsByTagName("input")[0]
+            let lb = cont.getElementsByTagName("label")[0]
+            lb.style.display = "none"
+
+            input.setAttribute("placeholder", input.dataset.placeholder)
+            lb.innerHTML = input.dataset.placeholder
+
+            input.addEventListener("blur", function () {
+                lb.style.display = "none"
+                input.setAttribute("placeholder", input.dataset.placeholder)
+            })
+
+            input.addEventListener("focus", function () {
+                lb.style.display = "block"
                 input.setAttribute("placeholder", "")
-            }
-            
-            input.onblur = function() { 
-                input.setAttribute("placeholder", div.innerHTML)
-                div.innerHTML = ""
-            }
+            })
         </script>
     </body>
 </html>

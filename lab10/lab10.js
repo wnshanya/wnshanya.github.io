@@ -15,6 +15,13 @@ export function getDecimal(num) {
     }
 }
 
+/**
+ * Программа возвращает дробную часть числа num.
+ *
+ * @param {number} num число, дробную часть которого нужно вернуть.
+ * @returns {function} результат выполнения методов, вычисляющие дробную часть числа num.
+ */
+
 export function ucFirst(str) {
     if (!str) {
         return str
@@ -23,11 +30,25 @@ export function ucFirst(str) {
     }
 }
 
+/**
+ * Функция  возвращает строку str с заглавным первым символом.
+ *
+ * @param {string} str строка, первый символ которой нужно вернуть.
+ * @returns {string} возвращает строку str с заглавным первым символом.
+ */
+
 export function checkSpam(str) {
     let new_str = str.toLowerCase()
 
     return new_str.includes('viagra') || new_str.includes('xxx')
 }
+
+/**
+ * Функция возвращает true, если строка str содержит 'viagra' или 'XXX', в противном случае false.
+ *
+ * @param {string} str строка, которую необходимо проверить на "лишние" слова.
+ * @returns {bool} возвращает true, если строка str содержит 'viagra' или 'XXX', в противном случае false.
+ */
 
 export function truncate(str, max_length) {
     if (str.length < max_length) {
@@ -36,6 +57,14 @@ export function truncate(str, max_length) {
         return str.slice(0, max_length - 1) + '…'
     }
 }
+
+/**
+ * Функция проверяет длину строки str и, если она превосходит maxlength, заменяет конец str на символ многоточие "…".
+ *
+ * @param {string} str строка, которая проверяется на длину.
+ * @param {number} maxlength длина строки, которую нельзя превысить.
+ * @returns {string} результатом функции является отформатированная строка.
+ */
 
 export function camelize(str){
     let buff_str = str.split("-")
@@ -52,6 +81,13 @@ export function camelize(str){
     return new_str
 }
 
+/**
+ *  Функция удаляет из строки символ девиса '-'.
+ *
+ * @param {string} str строка, из которой необходимо удалить символ дефиса.
+ * @returns {string] new_str, строка без символа дефиса.
+ */
+
 export function fibs(n){  
         let mas = []
         for (let i = 0; i < n; i++) {
@@ -61,6 +97,13 @@ export function fibs(n){
         return mas
 }
 
+/**
+ * Функция возвращает массив, заполненный числами Фибоначчи до n члена последовательности итальянского математика.
+ *
+ * @param {number} n необходимое количество членов последовательности ФиБоначчи.
+ * @returns {array}  mas, массив, заполненный члена последовательности итальянского математика.
+ */
+
 export function  arrReverseSorted(arr) {
     let arr_copy = arr.slice();
     
@@ -69,8 +112,22 @@ export function  arrReverseSorted(arr) {
     })
 }
 
+/**
+ * Функция возвращает отсортированный по убыванию массив.
+ *
+ * @param {array} arr массив, который необходимо отсортировать.
+ * @returns {array} отсортированный по убыванию массив, полученный в результате выполнения анониманой функции.
+ */
+
 export function unique(arr) {
     let arr_copy = arr
     
     return Array.from(new Set(arr_copy))
 }
+
+/**
+ * Функция возвращает измененный массив, состоящий из уникальных значений (аналог set).
+ *
+ * @param {array} arr массив, из которого нужно сделать множество.
+ * @returns {array} arr_copy, массив уникальных значений.
+ */

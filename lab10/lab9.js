@@ -15,3 +15,10 @@ export default function fib(n) {
         return b;
     }
 }
+
+/**
+ * Возвращает n-е число Фибоначчи.
+ *
+ * @param {number} n порядковый номер числа Фибоначчи.
+ * @return {number} b, n-е число Фибоначчи.
+ */

@@ -1,15 +1,22 @@
 'use strict'
 
-function pow(x, n) {
-    return x ** n;
-}
-
 /**
  * Возвращает x, возведённое в степень n.
  *
  * @param {number} x возводимое в степень число.
  * @param {number} n степень.
  * @return {number} x ** n, результат возведения в степень n числа x.
+ */
+
+function pow(x, n) {
+    return x ** n;
+}
+
+/**
+ * Возвращает сумму чисел от 1 до n.
+ *
+ * @param {number} n супремум.
+ * @return {number} sum, сумма чисел от 1 до n.
  */
 
 function sumTo(n) {
@@ -23,10 +30,10 @@ function sumTo(n) {
 }
 
 /**
- * Возвращает сумму чисел от 1 до n.
+ * Возвращает факториал числа n.
  *
- * @param {number} n супремум.
- * @return {number} sum, сумма чисел от 1 до n.
+ * @param {number} n число, факториал которого должен быть вычисленным.
+ * @return {number} result, факториал числа n.
  */
 
 function factorial(n) {   
@@ -40,10 +47,10 @@ function factorial(n) {
 }
 
 /**
- * Возвращает факториал числа n.
+ * Возвращает n-е число Фибоначчи.
  *
- * @param {number} n число, факториал которого должен быть вычисленным.
- * @return {number} result, факториал числа n.
+ * @param {number} n порядковый номер числа Фибоначчи.
+ * @return {number} b, n-е число Фибоначчи.
  */
 
  function fib(n) {
@@ -65,10 +72,11 @@ function factorial(n) {
 }
 
 /**
- * Возвращает n-е число Фибоначчи.
+ * Возвращает результат сравнения значений x и y.
  *
- * @param {number} n порядковый номер числа Фибоначчи.
- * @return {number} b, n-е число Фибоначчи.
+ * @param {number} x первый аргумент.
+ * @param {number} y второй аргумент.
+ * @return {function} анонимная функция, которая возвращает true, false или null
  */
 
 function compare(x) {
@@ -84,11 +92,10 @@ function compare(x) {
 }
 
 /**
- * Возвращает результат сравнения значений x и y.
+ * Возвращает сумму всех своих аргументов.
  *
- * @param {number} x первый аргумент.
- * @param {number} y второй аргумент.
- * @return {function} анонимная функция, которая возвращает true, false или null
+ * @param {number} список аргументов.
+ * @return {number} result, сумма всех аргументов.
  */
 
 function sum() {
@@ -100,10 +107,3 @@ function sum() {
 
    return result;
 }
-
-/**
- * Возвращает сумму всех своих аргументов.
- *
- * @param {number} список аргументов.
- * @return {number} result, сумма всех аргументов.
- */

@@ -1,4 +1,4 @@
-<!DOCTYPE HTML>
+<!-- <!DOCTYPE HTML>
 
 <html lang="ru">
     <head>
@@ -35,6 +35,62 @@
 
             input.addEventListener("blur", function () {
                 lb.style.display = "none"
+                input.setAttribute("placeholder", input.dataset.placeholder)
+            })
+
+            input.addEventListener("focus", function () {
+                lb.style.display = "block"
+                input.setAttribute("placeholder", "")
+            })
+        </script>
+    </body>
+</html> -->
+
+
+<!DOCTYPE HTML>
+
+<html lang="ru">
+    <head>
+        <title>Lab7_2Smaik</title>
+
+        <style>
+            ::placeholder {
+                color: blue;
+            }
+
+            #www {
+                color: blue;
+            }
+
+            #container {
+			    color: blue;
+	    }
+        </style>
+    </head>
+
+    <body>
+        <div id="container">
+            <label for = "www"></label>
+            <input id = "www" type = "text" data-placeholder = "Подсказка"/>
+        </div>
+
+        <script>
+            'use strict'
+
+            let cont = document.getElementById("container")
+
+            let input = cont.getElementsByTagName("input")[0]
+            let lb = cont.getElementsByTagName("label")[0]
+            lb.style.display = "none"
+
+            input.setAttribute("placeholder", input.dataset.placeholder)
+            lb.innerHTML = input.dataset.placeholder
+
+            input.addEventListener("blur", function () {
+                if(input.value = ""){
+                    lb.style.display = "None"
+                }
+                lb.style.display = "block"
                 input.setAttribute("placeholder", input.dataset.placeholder)
             })
 

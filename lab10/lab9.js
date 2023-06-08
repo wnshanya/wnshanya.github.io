@@ -1,5 +1,12 @@
 'use strict'
 
+/**
+ * Возвращает n-е число Фибоначчи.
+ *
+ * @param {number} n порядковый номер числа Фибоначчи.
+ * @return {number} b, n-е число Фибоначчи.
+ */
+
 export default function fib(n) {
     let a = 1n;
     let b = 1n;
@@ -15,10 +22,3 @@ export default function fib(n) {
         return b;
     }
 }
-
-/**
- * Возвращает n-е число Фибоначчи.
- *
- * @param {number} n порядковый номер числа Фибоначчи.
- * @return {number} b, n-е число Фибоначчи.
- */

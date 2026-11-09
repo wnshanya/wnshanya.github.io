@@ -43,4 +43,6 @@ function openSession(){save();$('#sessionName').textContent=state.title;$('#sess
 $('#session').onclick=openSession;$('#closeSession').onclick=()=>$('#sessionDialog').close();$('#saveSessionFile').onclick=downloadSession;$('#loadSessionFile').onclick=()=>$('#projectFile').click();
 document.addEventListener('keydown',e=>{if((e.ctrlKey||e.metaKey)&&e.key.toLowerCase()==='s'){e.preventDefault();$('#title').blur();downloadSession()}});
 window.addEventListener('pagehide',()=>{state.title=$('#title').textContent.trim().slice(0,200)||'МОЙ ТИР-ЛИСТ';save()});
+function resetAll(){remember();state=defaults();selected=null;$('#search').value='';$('#title').textContent=state.title;save();render();$('#resetDialog').close();toast('Исходный состав восстановлен. Все участники в резерве.')}
+$('#fullReset').onclick=()=>$('#resetDialog').showModal();$('#closeReset').onclick=()=>$('#resetDialog').close();$('#confirmReset').onclick=resetAll;$('#backupBeforeReset').onclick=downloadSession;
 render();save();

@@ -10,9 +10,11 @@
 
 #resetDialog>p{line-height:1.7;font-size:13px}#fullReset{color:#edb49c}#confirmReset{border-color:#805348;background:#442c25}
 
-/* Equal-width columns fill each complete reserve row; the last row keeps its order. */
-.pool{display:grid;grid-template-columns:repeat(auto-fill,minmax(min(100%,var(--card)),1fr));align-items:start}
-.pool>.card{width:100%;height:auto;padding:0 0 21px}
-.pool>.card>img{height:auto;aspect-ratio:1;object-fit:cover}
-.pool>.card>.initial,.pool>.card>.avatar-frame{height:auto;aspect-ratio:1}
+/* Equal-width columns fill complete tier and reserve rows without stretching sparse rows. */
+.row .zone,.pool{display:grid;grid-template-columns:repeat(auto-fill,minmax(min(100%,var(--card)),1fr))}
+.pool{align-items:start}
+.zone>.card{width:100%;height:auto;padding:0 0 21px}
+.zone>.card>img{height:auto;aspect-ratio:1;object-fit:cover}
+.zone>.card>.initial,.zone>.card>.avatar-frame{height:auto;aspect-ratio:1}
+.row-empty{grid-column:1/-1}
 .pool>.muted{grid-column:1/-1}
